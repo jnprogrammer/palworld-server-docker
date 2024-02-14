@@ -1,10 +1,11 @@
 FROM cm2network/steamcmd:root
 LABEL maintainer="thijs@loef.dev"
 
+  # added NFS support 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     xdg-user-dirs=0.17-2 \
     procps=2:3.3.17-5 \
-    nfs-common \  
+    nfs-common \
     wget=1.21-1+deb11u1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
